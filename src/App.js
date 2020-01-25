@@ -19,13 +19,13 @@ export default function App() {
         })
     }
     let backdrop;
-    if (this.state.sideDrawerOpen){
+    if (drawer.sideDrawerOpen){
         backdrop=<BackDrop click={backDropClickHandler}/>
     }
     return (
         <div className='App'>
             <Toolbar drawerClickHandler={drawerToggleClickHandler}/>
-            <SideDrawer show={this.state.sideDrawerOpen}/>
+            <SideDrawer show={drawer.sideDrawerOpen}/>
             {backdrop}
             <main className='main'>
                 <p>this is page content</p>
